@@ -1,0 +1,90 @@
+.home-page {
+    /* Ocupa todo o espaço vertical restante entre o Header e o Footer */
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente na área útil */
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto; /* Remove as margens fixas antigas que jogavam o conteúdo para baixo */
+    padding: 2rem;
+    text-align: center;
+    box-sizing: border-box;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* PONTO DE MELHORIA 2: Subir o H1 e melhorar drasticamente a cor/contraste */
+.home-page h1 {
+    /* Um degradê moderno e tecnológico que se destaca perfeitamente no fundo escuro */
+    background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 13rem; /* Reduzido para aproximar o subtítulo */
+    margin-top: 1rem;    /* Força o título a subir levemente, deixando o visual mais harmônico */
+    letter-spacing: -1.5px;
+    text-shadow: 0 4px 30px rgba(56, 189, 248, 0.1);
+}
+
+.home-page p {
+    color: #94a3b8; /* Cor cinza-claro azulado com excelente leitura */
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
+}
+
+.btn-secondary {
+    background: rgba(30, 41, 59, 0.7);
+    color: #f8fafc;
+    border: 1px solid #334155;
+    backdrop-filter: blur(4px);
+}
+
+.btn-secondary:hover {
+    background: #1e293b;
+    border-color: #475569;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(15px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}

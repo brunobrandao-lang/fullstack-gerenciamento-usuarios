@@ -5,8 +5,10 @@ import Header from './components/Header'
 import CadastroPage from './pages/CadastroPage'
 import HomePage from './pages/HomePage'
 import ListaUsuariosPages from './pages/ListaUsuariosPages'
+import { useState } from 'react'
 
 function App() {
+  const [count, setCount] = useState(0)
 
   return (
     <>

@@ -1,0 +1,75 @@
+.cadastro-page {
+    max-width: 450px;
+    margin: 4rem auto;
+    padding: 2.5rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.cadastro-page h2 {
+    color: #0f172a;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.grupo-form label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.grupo-form input {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    color: #1e293b;
+    transition: all 0.2s ease;
+}
+
+/* Efeito Glow Ágil ao focar no campo */
+.grupo-form input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.cadastro-page button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+}
+
+.cadastro-page button:not(:disabled):hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* Estado de carregamento */
+.cadastro-page button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    opacity: 0.7;
+}

@@ -24,7 +24,7 @@ export default function CadastroPage() {
         const dadosDoFormulario = {nome, email, senha}
         try {
             //Tenta cadastrar um usuario na API
-            const resposta = await api.post('/usuarios', dadosDoFormulario)
+            const resposta = await api.post('', dadosDoFormulario)
 
             //se der certo
             toast.success(resposta.data.mensagem)
@@ -32,7 +32,7 @@ export default function CadastroPage() {
         } catch (erro) {
             //se der errado
             const mensagemDoServidor = erro?.response?.data?.mensagem
-            toast.erro(mensagemDoServidor)
+            toast.error(mensagemDoServidor)
         } finally {
             //executa dando certo ou errado
             setEstaEnviando(false)
@@ -41,13 +41,14 @@ export default function CadastroPage() {
 
         return (
             <div className='cadastro-page'>
+                <h2>Cadastro de Usuário</h2>
                 <form onSubmit={envioDoFormulario}>
                     <div className='grupo-form'>
                         <label htmlFor="campo-nome">Nome</label>
                         <input
                         id='campo-nome'
                         type='text'
-                        placeholder='Ex.: Maria Silva'
+                        placeholder='Ex.: Bruno Brandão'
                         value={nome}
                         onChange={(e) => setNome(e.target.value)}
                         />
@@ -58,7 +59,7 @@ export default function CadastroPage() {
                         <input
                         id='campo-email'
                         type='email'
-                        placeholder='Ex.: Maria@email.com'
+                        placeholder='Ex.: Bruno@email.com'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         />
@@ -69,6 +70,7 @@ export default function CadastroPage() {
                     <input
                         id='campo-senha'
                         type='password'
+                        placeholder='Digite sua senha'
                         value={senha}
                         onChange={(e) => setSenha(e.target.value)}
                     />

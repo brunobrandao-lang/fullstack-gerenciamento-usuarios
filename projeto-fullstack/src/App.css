@@ -182,3 +182,21 @@
     border-right-color: var(--border);
   }
 }
+
+/* Garante que o navegador permita ocupar toda a altura disponível */
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Se o seu App.jsx contiver uma div principal estrutural, 
+   ela deve se comportar como um container flexível vertical */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0b111e; /* Fundo escuro premium unificado */
+}

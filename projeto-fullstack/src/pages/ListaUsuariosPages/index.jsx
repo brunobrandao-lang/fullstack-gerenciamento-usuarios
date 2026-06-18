@@ -10,7 +10,7 @@ export default function ListaUsuariosPages() {
         async function buscarUsuarios() {
             try{
                 //se der certo
-                const resposta = await api.get('/usuarios')
+                const resposta = await api.get('')
                 setUsuarios(resposta.data.usuarios || resposta.data)
             } catch{
                 //se der errado
@@ -31,8 +31,8 @@ export default function ListaUsuariosPages() {
                     <table className='tabela-usuarios'>
                         <thead>
                             <tr>
-                                <tr>Nome</tr>
-                                <tr>E-mail</tr>
+                                <th>Nome</th>
+                                <th>E-mail</th>
                             </tr>
                         </thead>
                         <tbody>
